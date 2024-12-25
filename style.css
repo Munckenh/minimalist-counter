@@ -2,9 +2,10 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    overflow: auto;
+    overflow-y: hidden;
+    overflow-x: auto;
     display: flex;
-    justify-content: center;
+    justify-content: safe center;
     align-items: center;
 }
 
@@ -14,6 +15,7 @@ html, body {
     font-family: 'Courier New', Courier, monospace;
     width: fit-content;
     gap: 0.25rem;
+    padding: 2rem;
 }
 
 .counter-widget button {
