@@ -1,0 +1,58 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.counter-widget {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Courier New', Courier, monospace;
+    width: fit-content;
+    gap: 0.25rem;
+}
+
+.counter-widget button {
+    font-family: inherit;
+    width: auto;
+    height: 4rem;
+    border-radius: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    color: white;
+    border-radius: 0.25rem 0.25rem 1rem 1rem;
+    background-color: #000;
+}
+
+.counter-widget button:active {
+    transform: scale(0.98);
+}
+
+.counter-display {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    border: 2px solid #000;
+    border-radius: 1rem 1rem 0.25rem 0.25rem;
+    padding: 2rem 3rem;
+}
+
+.counter-digit {
+    overflow: hidden;
+    height: 6rem;
+    width: 5rem;
+    border: 2px solid #000;
+    border-radius: 1rem;
+    font-size: 3rem;
+}
+
+.counter-digit-column div {
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
