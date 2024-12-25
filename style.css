@@ -52,6 +52,10 @@ html, body {
     font-size: 3rem;
 }
 
+.counter-digit-column {
+    transition: transform 0.15s ease-in-out;
+}
+
 .counter-digit-column div {
     height: 6rem;
     display: flex;

@@ -39,7 +39,6 @@ function increment() {
     for (let i = digits - 1; i >= 0; i--) {
         const digit = remaining % 10;
         const column = digitContainers[i].firstElementChild;
-        column.style.transition = 'transform 0.15s ease-in-out';
         column.style.transform = `translateY(${-6 * digit}rem)`;
         remaining = Math.floor(remaining / 10);
     }
