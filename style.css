@@ -29,9 +29,16 @@ html, body {
     border-radius: 0.25rem 0.25rem 1rem 1rem;
     background-color: #000;
     transition: transform 0.3s cubic-bezier(0.42, 1.76, 0.63, 1);
+    touch-action: manipulation;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
 }
 
-.counter-widget button:active {
+.counter-widget button:active,
+.counter-widget button:hover:active,
+.counter-widget button:focus-visible:active {
     transform: scale(0.98);
     transition: transform 0s;
 }
