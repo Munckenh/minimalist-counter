@@ -55,7 +55,7 @@ html, body {
 }
 
 .counter-digit-column {
-    transition: transform 0.15s ease-in-out;
+    transition: transform 0.2s cubic-bezier(0.6, 1.55, 0.63, 1);
 }
 
 .counter-digit-column div {
