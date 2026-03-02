@@ -5,7 +5,7 @@ html, body {
     overflow-y: hidden;
     overflow-x: auto;
     display: flex;
-    justify-content: safe center;
+    justify-content: center;
     align-items: center;
 }
 
@@ -18,38 +18,13 @@ html, body {
     padding: 2rem;
 }
 
-.counter-widget button {
-    font-family: inherit;
-    width: auto;
-    height: 4rem;
-    border-radius: 0.5rem;
-    font-size: 2rem;
-    border: none;
-    color: white;
-    border-radius: 0.25rem 0.25rem 1rem 1rem;
-    background-color: #000;
-    transition: transform 0.3s cubic-bezier(0.42, 1.76, 0.63, 1);
-    touch-action: manipulation;
-    -webkit-user-select: none;
-    -webkit-touch-callout: none;
-    -webkit-tap-highlight-color: transparent;
-    user-select: none;
-}
-
-.counter-widget button:active,
-.counter-widget button:hover:active,
-.counter-widget button:focus-visible:active {
-    transform: scale(0.98);
-    transition: transform 0s;
-}
-
 .counter-display {
     display: flex;
     flex-direction: row;
-    gap: 1rem;
+    gap: 0.5rem;
     border: 2px solid #000;
     border-radius: 1rem 1rem 0.25rem 0.25rem;
-    padding: 2rem 3rem;
+    padding: 1.5rem 2.5rem;
 }
 
 .counter-digit {
@@ -70,4 +45,47 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.counter-buttons {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.counter-buttons button {
+    font-family: inherit;
+    flex: 1;
+    height: 4rem;
+    font-size: 2rem;
+    border: none;
+    color: #fff;
+    background-color: #000;
+    transition: transform 0.3s cubic-bezier(0.42, 1.76, 0.63, 1);
+    touch-action: manipulation;
+    user-select: none;
+}
+
+.counter-buttons button:nth-child(1) {
+    border-radius: 0.25rem 0.25rem 0.25rem 1rem;
+}
+
+.counter-buttons button:nth-child(2) {
+    border-radius: 0.25rem;
+}
+
+.counter-buttons button:nth-child(3) {
+    border-radius: 0.25rem 0.25rem 1rem 0.25rem;
+}
+
+.counter-buttons button#reset {
+    border: 2px solid #000;
+    color: #000;
+    background-color: transparent;
+}
+
+.counter-buttons button:active,
+.counter-buttons button:hover:active,
+.counter-buttons button:focus-visible:active {
+    transform: scale(0.98);
+    transition: transform 0s;
 }
