@@ -30,11 +30,14 @@ for (let i = 0; i < digits; i++) {
     counterDisplay.appendChild(container);
 }
 
+function playAudio() {
+    const clone = audio.cloneNode();
+    clone.play();
+}
+
 function increment() {
-    if (++count > maxCount) {
-        count = 0;
-    }
-    
+    if (++count > maxCount) count = 0;
+
     let remaining = count;
     for (let i = digits - 1; i >= 0; i--) {
         const digit = remaining % 10;
@@ -43,7 +46,29 @@ function increment() {
         remaining = Math.floor(remaining / 10);
     }
 
-    // Allow overlapping audio
-    const clone = audio.cloneNode();
-    clone.play();
+    playAudio();
+}
+
+function decrement() {
+    if (--count < 0) count = maxCount;
+
+    let remaining = count;
+    for (let i = digits - 1; i >= 0; i--) {
+        const digit = remaining % 10;
+        const column = digitContainers[i].firstElementChild;
+        column.style.transform = `translateY(${-6 * digit}rem)`;
+        remaining = Math.floor(remaining / 10);
+    }
+
+    playAudio();
+}
+
+function reset() {
+    count = 0;
+    for (let i = 0; i < digits; i++) {
+        const column = digitContainers[i].firstElementChild;
+        column.style.transform = `translateY(0rem)`;
+    }
+
+    playAudio();
 }
